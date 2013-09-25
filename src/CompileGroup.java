@@ -7,6 +7,7 @@ import org.antlr.v4.runtime.tree.*;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
+// FIXME : launch graphic site which accept simple API of putpoint(ID,x,y,weight) connect(A,B) 
 
 public class CompileGroup {
 	

@@ -1,0 +1,1 @@
+// FIXME : launch graphic site which accept simple API of putpoint(ID,x,y,weight) connect(A,B) 

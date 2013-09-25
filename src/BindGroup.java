@@ -16,9 +16,15 @@ import org.stringtemplate.v4.STGroupFile;
 
 public class BindGroup extends GroupoidBaseListener {
 	private int count;
+	private double centerofX;
+	private double centerofY;
+	
 	
 	public BindGroup() {
 		// nothing special
+		this.centerofX = 0.0;
+		this.centerofY = 0.0;
+		
 	}
 	
 	public void enterGroup(GroupoidParser.GroupContext ctx) {
@@ -30,14 +36,15 @@ public class BindGroup extends GroupoidBaseListener {
 	}
 	
 	public void exitMember(GroupoidParser.MemberContext ctx) {
+		System.out.println("member " + ctx.ID().getText());
 		this.count++;
 	}
-	
+		
 	
 	// utilities
 	
 	private void showResult() {
-		System.out.println(Integer.toString(this.count));
+		System.out.println(Integer.toString(this.count) + " X: " + Double.toString(this.centerofX / this.count) + " Y: " + Double.toString(this.centerofY / this.count));
 	}
 
 }
